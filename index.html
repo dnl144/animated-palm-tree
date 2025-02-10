@@ -12,30 +12,14 @@
             <img src="centrelogo.png" alt="Entrepreneurship starts somewhere logo" class="centered-logo">
         </div>
         <div class="twitter-feed">
-            <a class="twitter-timeline" 
-               data-width="600"
-               data-height="600"
-               data-dnt="true"
-               data-theme="light"
-               href="https://twitter.com/whereisthestart"
-               >Loading tweets...</a>
+            <iframe
+                src="https://syndication.twitter.com/srv/timeline-profile/screen-name/whereisthestart"
+                height="600"
+                width="600"
+                frameborder="0"
+                title="Twitter Timeline"
+            ></iframe>
         </div>
     </main>
-    <script>
-        window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            t._e = [];
-            t.ready = function(f) {
-                t._e.push(f);
-            };
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
 </body>
 </html>
