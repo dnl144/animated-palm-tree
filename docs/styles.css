@@ -34,15 +34,37 @@ main {
     display: block;
 }
 
+/* X Feed Styles */
+.x-feed {
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+#x-timeline {
+    min-height: 600px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .logo-container {
         padding: 10px;
+    }
+    
+    .x-feed {
+        max-width: 100%;
+        padding: 0 10px;
     }
 }
 
 @media (max-width: 480px) {
     main {
         padding: 1rem;
+    }
+    
+    #x-timeline {
+        min-height: 500px; /* Slightly shorter on mobile */
     }
 }
