@@ -12,41 +12,52 @@
             <img src="centrelogo.png" alt="Entrepreneurship starts somewhere logo" class="centered-logo">
         </div>
         <div class="x-feed">
-            <!-- Updated X (formerly Twitter) Timeline -->
             <div id="x-timeline"></div>
-            <script>
-                window.twttr = (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0],
-                        t = window.twttr || {};
-                    if (d.getElementById(id)) return t;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "https://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                    t._e = [];
-                    t.ready = function(f) {
-                        t._e.push(f);
-                    };
-                    return t;
-                }(document, "script", "twitter-wjs"));
-
-                twttr.ready(function() {
-                    twttr.widgets.createTimeline(
-                        {
-                            sourceType: "profile",
-                            screenName: "whereisthestart"
-                        },
-                        document.getElementById("x-timeline"),
-                        {
-                            width: '600',
-                            height: '600',
-                            chrome: "noheader nofooter noborders transparent",
-                            theme: 'light' // or 'dark'
-                        }
-                    );
-                });
-            </script>
         </div>
     </main>
+    <footer>
+        <div class="footer-content">
+            <a href="https://twitter.com/whereisthestart" target="_blank" rel="noopener noreferrer" class="x-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="x-logo">
+                    <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+                <span>Dan (@whereisthestart)</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- X Widget Script -->
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+            return t;
+        }(document, "script", "twitter-wjs"));
+
+        twttr.ready(function() {
+            twttr.widgets.createTimeline(
+                {
+                    sourceType: "profile",
+                    screenName: "whereisthestart"
+                },
+                document.getElementById("x-timeline"),
+                {
+                    width: '600',
+                    height: '600',
+                    chrome: "noheader nofooter noborders transparent",
+                    theme: 'light'
+                }
+            );
+        });
+    </script>
 </body>
 </html>
