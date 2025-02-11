@@ -11,15 +11,41 @@
         <div class="logo-container">
             <img src="centrelogo.png" alt="Entrepreneurship starts somewhere logo" class="centered-logo">
         </div>
-        <div class="twitter-feed">
-            <a class="twitter-timeline" 
-               href="https://twitter.com/whereisthestart"
-               data-width="600"
-               data-height="600"
-               data-chrome="noheader nofooter noborders transparent">
-               Tweets by @whereisthestart
-            </a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="x-feed">
+            <!-- Updated X (formerly Twitter) Timeline -->
+            <div id="x-timeline"></div>
+            <script>
+                window.twttr = (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        t = window.twttr || {};
+                    if (d.getElementById(id)) return t;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    t._e = [];
+                    t.ready = function(f) {
+                        t._e.push(f);
+                    };
+                    return t;
+                }(document, "script", "twitter-wjs"));
+
+                twttr.ready(function() {
+                    twttr.widgets.createTimeline(
+                        {
+                            sourceType: "profile",
+                            screenName: "whereisthestart"
+                        },
+                        document.getElementById("x-timeline"),
+                        {
+                            width: '600',
+                            height: '600',
+                            chrome: "noheader nofooter noborders transparent",
+                            theme: 'light' // or 'dark'
+                        }
+                    );
+                });
+            </script>
         </div>
     </main>
 </body>
