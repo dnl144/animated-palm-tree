@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,9 +11,6 @@
         <div class="logo-container">
             <img src="centrelogo.png" alt="Entrepreneurship starts somewhere logo" class="centered-logo">
         </div>
-        <div class="x-feed">
-            <div id="x-timeline"></div>
-        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -25,39 +22,5 @@
             </a>
         </div>
     </footer>
-
-    <!-- X Widget Script -->
-    <script>
-        window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            t._e = [];
-            t.ready = function(f) {
-                t._e.push(f);
-            };
-            return t;
-        }(document, "script", "twitter-wjs"));
-
-        twttr.ready(function() {
-            twttr.widgets.createTimeline(
-                {
-                    sourceType: "profile",
-                    screenName: "whereisthestart"
-                },
-                document.getElementById("x-timeline"),
-                {
-                    width: '600',
-                    height: '600',
-                    chrome: "noheader nofooter noborders transparent",
-                    theme: 'light'
-                }
-            );
-        });
-    </script>
 </body>
 </html>
