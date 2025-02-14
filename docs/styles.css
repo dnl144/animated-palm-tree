@@ -15,6 +15,40 @@ body {
     color: #ffffff;
 }
 
+/* Headers */
+.section-header {
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Projects section */
+.projects-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-link {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+}
+
+.project-logo {
+    max-width: 200px;
+    height: auto;
+}
+
 /* Main content */
 main {
     flex: 1;
