@@ -11,6 +11,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* Main content */
@@ -38,8 +40,8 @@ main {
 /* Footer styles */
 footer {
     padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-top: 1px solid #e9ecef;
+    background-color: #111111;
+    border-top: 1px solid #333333;
 }
 
 .footer-content {
@@ -53,12 +55,12 @@ footer {
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    color: #1a1a1a;
+    color: #ffffff;
     transition: color 0.2s ease;
 }
 
 .social-link:hover {
-    color: #4a4a4a;
+    color: #cccccc;
 }
 
 .x-logo,
