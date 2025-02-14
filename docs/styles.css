@@ -61,9 +61,16 @@ footer {
     color: #4a4a4a;
 }
 
-.x-logo {
+.x-logo,
+.linkedin-logo {
     width: 1.25rem;
     height: 1.25rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 /* Responsive adjustments */
